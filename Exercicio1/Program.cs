@@ -2,46 +2,37 @@
 {
     internal class Program
     {
-        public delegate decimal CalculateDiscount(decimal price);
+        public delegate decimal CalculateDiscount(decimal preco);
         static void Main(string[] args)
         {
-            Console.WriteLine("--- Módulo de Regras de Negócio: Descontos ---");
+            Console.WriteLine("Sistema de Descontos ");
 
-            // 2. Solicita ao usuário que informe o preço original
-            Console.Write("Informe o preço original do produto: R$ ");
-            string input = Console.ReadLine();
+            Console.Write("\nInforme o preço original do produto: R$ ");
+            string precoProduto = Console.ReadLine();
 
-            // Valida se a entrada é um número decimal válido
-            if (decimal.TryParse(input, out decimal precoOriginal))
+            if (decimal.TryParse(precoProduto, out decimal precoOriginal))
             {
-                // 3. Instancia o delegate apontando para o método compatível
-                CalculateDiscount calcular = AplicarDescontoDezPorcento;
+                CalculateDiscount calcularDesconto = aplicarDezPorCento;
 
-                // 4. Utiliza o delegate no fluxo da aplicação para calcular o valor final
-                decimal precoFinal = calcular(precoOriginal);
+                decimal precoFinal = calcularDesconto(precoOriginal);
 
-                // 5. Exibe o valor final ao usuário
-                Console.WriteLine("\n--- Resultado ---");
-                Console.WriteLine($"Preço original: R$ {precoOriginal:F2}");
-                Console.WriteLine($"Preço com 10% de desconto: R$ {precoFinal:F2}");
+                Console.WriteLine($"\nPreços do Produto:");
+                Console.WriteLine($"Preço original: {precoOriginal:C2}");
+                Console.WriteLine($"Preço com 10% de desconto: {precoFinal:C2}");
             }
             else
             {
-                Console.WriteLine("Erro: Por favor, insira um valor numérico válido.");
+                Console.WriteLine("Por favor, insira um valor válido.");
             }
-
             Console.WriteLine("\nPressione qualquer tecla para sair...");
             Console.ReadKey();
         }
 
-        // Método compatível com a assinatura do delegate CalculateDiscount
-        public static decimal AplicarDescontoDezPorcento(decimal preco)
+        public static decimal aplicarDezPorCento(decimal preco)
         {
-            // Calcula o desconto de 10%
             decimal desconto = preco * 0.10m;
             return preco - desconto;
         }
     }
 }
-    }
-}
+   

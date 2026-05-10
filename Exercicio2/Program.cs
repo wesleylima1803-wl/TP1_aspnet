@@ -48,19 +48,19 @@
             Console.ReadKey();
         }
 
-        static void MensagemPortugues(string nomeUsuario)
+        public static void MensagemPortugues(string nomeUsuario)
         {
             Console.WriteLine();
             Console.WriteLine($"Olá, {nomeUsuario}! Bem-vindo ao nosso sistema x.");
         }
 
-        static void MensagemIngles(string nomeUsuario)
+        public static void MensagemIngles(string nomeUsuario)
         {
             Console.WriteLine();
             Console.WriteLine($"Hello, {nomeUsuario}! Welcome to our system x.");
         }
 
-        static void MensagemEspanhol(string nomeUsuario)
+        public static void MensagemEspanhol(string nomeUsuario)
         {
             Console.WriteLine();
             Console.WriteLine($"¡Hola, {nomeUsuario}! Bienvenido a nuestro sistema x.");

@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Monitoramento de Temperatura Industrial");
+            Console.WriteLine("Monitoramento de Temperatura");
 
             TemperatureSensor sensorTemperatura = new TemperatureSensor();
 
@@ -26,12 +26,12 @@
                 }
                 else
                 {
-                    Console.WriteLine("Por favor, insira uma temperatura válida.");
+                    Console.WriteLine("\nPor favor, insira uma temperatura válida.");
                 }
 
                 Console.WriteLine("");
             }
-            Console.WriteLine("Finalizado.");
+            Console.WriteLine("\nFinalizado.");
         }
 
         public static void excedeuTemperatura(object sender, TemperatureEventArgs e)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercicio6
+namespace Exercicio7
 {
     internal class Logger
     {

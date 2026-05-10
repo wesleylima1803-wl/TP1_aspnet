@@ -1,0 +1,39 @@
+﻿@page
+@model Exercicio10.Pages.AddProductModel
+@{
+    ViewData["Title"] = "Adicionar Produto";
+}
+
+<div class="container mt-4">
+    <h2>Cadastrar Novo Produto</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post">
+                <div class="form-group mb-3">
+                    <label asp-for="Nome" class="control-label">Nome do Produto:</label>
+                    <input asp-for="Nome" class="form-control" placeholder="Ex: Controle de TV" required />
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="Preco" class="control-label">Preço (R$):</label>
+                    <input asp-for="Preco" type="number" step="0.01" class="form-control" placeholder="Ex: 150.00" required />
+                </div>
+
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    @if (Model.FormularioEnviado == true)
+    {
+        <div class="alert alert-success mt-5 border-success">
+            <h4 class="alert-heading">Mensagem Enviada com sucesso!</h4>
+            <p>Os dados do produto foram recebidos pelo servidor e listados abaixo:</p>
+            <hr>
+            <p class="mb-0"><strong>Produto Cadastrado:</strong> @Model.Nome</p>
+            <p class="mb-0"><strong>Valor:</strong> @Model.Preco.ToString("C")</p>
+        </div>
+    }
+</div>

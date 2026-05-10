@@ -1,6 +1,4 @@
-﻿using Exercicio6;
-
-namespace Exercicio7
+﻿namespace Exercicio7
 {
     internal class Program
     {
@@ -12,8 +10,6 @@ namespace Exercicio7
 
             Console.WriteLine("Delegate vazio...");
             logMulticast?.Invoke("\nMensagem vazia");
-
-            Console.WriteLine("NÃO TIVEMOS EXCEÇÃO.");
 
             Console.WriteLine("\nAdicionando métodos...");
 

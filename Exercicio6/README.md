@@ -1,0 +1,1 @@
+![Print Exercicio6](./printExercicio6.JPG)

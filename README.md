@@ -1,4 +1,5 @@
-# Teste de Perfomance TP1 - Desenvolvimento Web com .NET e Bases de Dados [26E2_4]
+# Teste de Perfomance - TP1
+## Desenvolvimento Web com .NET e Bases de Dados [26E2_4]
 
 ## Ponto de Partida
 Neste primeiro Teste de Performance (TP), iremos focar no domínio dos conceitos fundamentais de Delegates, Events e aplicações web com Razor Pages utilizando o framework ASP.NET Core.
@@ -7,7 +8,7 @@ Esses temas são essenciais para a construção de sistemas back-end modernos, f
 
 Ao longo dos exercícios, você irá aplicar esses conceitos em cenários práticos que simulam demandas reais do mercado de desenvolvimento de sistemas.
 
-### 1 Implementação de Delegate Personalizado para Descontos
+### 1. Implementação de Delegate Personalizado para Descontos
 
 Imagine que você está desenvolvendo um módulo de regras de negócio para uma aplicação de vendas online. Esse sistema deve aplicar diferentes políticas de desconto conforme o perfil do cliente. Para isso, é necessário encapsular as regras de cálculo de desconto em uma estrutura reutilizável.
 
@@ -20,7 +21,7 @@ Implemente um método compatível com esse delegate.
 Utilize o delegate no fluxo da aplicação para calcular e exibir o valor final ao usuário.
 Este exercício introduz o uso de delegates personalizados para encapsular lógicas de negócio com alta reutilização e manutenção.
 
-### 2 Ações Multilíngues com Action<string>
+### 2. Ações Multilíngues com Action<string>
 
 Uma aplicação SaaS voltada ao público internacional precisa exibir mensagens de boas-vindas em diferentes idiomas, conforme a configuração do cliente.
 
@@ -32,7 +33,7 @@ Crie uma estrutura com Action<string> para exibir a mensagem de boas-vindas no i
 Implemente ao menos três versões de mensagens encapsuladas nos delegates.
 Este exercício mostra como delegates com Action são úteis em interações que envolvem ações sem retorno, como feedback ao usuário.
 
-### 3 Cálculo de Área Utilizando Func
+### 3. Cálculo de Área Utilizando Func
 
 Um sistema de engenharia precisa realizar cálculos de área com base em entradas fornecidas pelo operador.
 
@@ -44,7 +45,7 @@ Crie um Func<double, double, double> para calcular a área.
 Utilize o delegate para exibir o resultado ao final do processo.
 Esse exercício demonstra o uso prático do Func como abstração de cálculos com retorno.
 
-### 4 Monitoramento de Temperatura com Evento Personalizado
+### 4. Monitoramento de Temperatura com Evento Personalizado
 
 Sistemas embarcados em ambientes industriais monitoram sensores em tempo real. Uma funcionalidade comum é emitir alertas quando a temperatura ultrapassa o limite seguro.
 
@@ -56,7 +57,7 @@ Dispare o evento sempre que o valor ultrapassar 100ºC.
 Crie um manipulador que mostre um alerta no console.
 Com este exercício, você aprende a usar eventos para tornar aplicações mais reativas e seguras.
 
-### 5 Notificação de Conclusão de Download com Eventos
+### 5. Notificação de Conclusão de Download com Eventos
 
 Ao lidar com tarefas assíncronas, como downloads, sistemas devem informar o usuário sobre a finalização do processo.
 
@@ -68,7 +69,7 @@ Crie um evento DownloadCompleted.
 Dispare o evento ao final do processo e exiba uma mensagem no console.
 Este exercício ensina como eventos são utilizados para notificar o sistema sobre o fim de uma operação.
 
-### 6 Sistema de Registro com Multicast Delegate
+### 6. Sistema de Registro com Multicast Delegate
 
 Uma aplicação corporativa precisa registrar logs simultaneamente em vários destinos: console, arquivo e banco (simulado).
 
@@ -80,7 +81,7 @@ Adicione os três métodos ao delegate.
 Ao chamar o delegate com uma mensagem, todas as saídas devem ser executadas.
 Esse exercício reforça como delegates podem ser encadeados para criar comportamentos complexos com baixa acoplamento.
 
-### 7 Garantia de Robustez em Invocação de Delegates
+### 7. Garantia de Robustez em Invocação de Delegates
 
 Ao usar delegates em tempo de execução, é fundamental garantir que invocações não gerem erros caso não haja métodos associados.
 
@@ -91,7 +92,7 @@ Substitua todas as invocações diretas por chamadas usando ?.Invoke().
 Teste o sistema sem nenhum método associado ao delegate e verifique que não ocorrem exceções.
 Esse exercício promove boas práticas para escrita de código mais robusto.
 
-### 8 Construção de Aplicação Web com Razor Pages
+### 8. Construção de Aplicação Web com Razor Pages
 
 Aplicativos web baseados em Razor Pages são comuns em sistemas internos e portais administrativos.
 
@@ -103,7 +104,7 @@ As informações podem estar fixas ou armazenadas em uma lista na página.
 Configure navegação básica entre as páginas.
 Com este exercício você começa a construir aplicações web completas com estrutura MVC simplificada.
 
-### 9 Exploração da Estrutura de Projeto ASP.NET Core
+### 9. Exploração da Estrutura de Projeto ASP.NET Core
 
 Compreender a estrutura do projeto ASP.NET Core é essencial para manutenção e evolução de aplicações.
 
@@ -116,7 +117,7 @@ Onde são configurados os serviços da aplicação?
 Como é feito o roteamento de URLs?
 Entregue as respostas no arquivo markdown README.md deste exercício.
 
-### 10 Implementação de Formulário em Razor Pages
+### 10. Implementação de Formulário em Razor Pages
 
 Cadastros são uma funcionalidade central em aplicações web.
 
@@ -127,7 +128,7 @@ Implemente um formulário com dois campos: Nome e Preço.
 Ao submeter o formulário, exiba os dados preenchidos de volta na página.
 Esse exercício mostra o ciclo básico de entrada e exibição de dados no modelo Razor Pages.
 
-### 11 Manipulação de Strings com Delegates Encadeados
+### 11. Manipulação de Strings com Delegates Encadeados
 
 Transformações encadeadas são comuns em pipelines de processamento.
 
@@ -140,7 +141,7 @@ Outro que remova espaços em branco.
 Observe e analise o comportamento do resultado.
 Esse exercício ajuda a compreender o comportamento de retorno em delegates multicast.
 
-### 12 Integração de Delegates e Eventos em Aplicação Web
+### 12. Integração de Delegates e Eventos em Aplicação Web
 
 Sistemas modernos integram lógica de negócio com eventos para rastrear operações de forma centralizada.
 
